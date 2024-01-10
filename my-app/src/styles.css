@@ -1,0 +1,28 @@
+:root {
+    --primary-color: #FFA500; /* Replace with the exact shade of Logo Orange */
+    --secondary-color: #333333; /* Dark Gray/Black */
+    --background-color: #F5F5F5; /* Light Gray or Off-White */
+    --accent-color: #FFFFFF; /* White */
+    --highlight-color: #FFC04C; /* Lighter shade of Logo Orange */
+  }
+
+
+  body {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+  }
+  
+  a, .cta-button {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+  }
+  
+  a:hover, .cta-button:hover {
+    background-color: var(--highlight-color);
+  }
+  
+  .footer {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+  }
+  

@@ -1,0 +1,143 @@
+/* components/NavBar/NavBar.css */
+
+:root {
+    --navbar-height-large: 85px; /* Height for large screens */
+    --navbar-height-medium: 85px; /* Height for medium screens */
+    --navbar-height-small: 68px; /* Height for small screens */
+  }
+  
+  .navbar.navbar-light {
+    background-color: var(--secondary-color) !important; /* Dark Gray/Black */
+    display: flex;
+    align-items: center;
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Stick to the top */
+    height: var(--navbar-height-large); /* Original larger height */
+    transition: height 0.3s ease-in-out;
+  }
+  
+  .navbar-light .navbar-brand,
+  .navbar-light .navbar-nav .nav-link {
+    color: var(--primary-color); /* Logo Orange */
+    background-color: transparent !important;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-light .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-color); /* Primary color line */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .navbar-logo, .navbar-typography {
+    transition: transform 0.3s ease-in-out; /* Add this line */
+}
+
+  .navbar-light .navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #FFFFFF; /* White close to gray */
+  }
+  
+  .navbar-logo {
+    width: 30px; /* Smaller size */
+    height: auto;
+    margin-right: 10px; /* Adjust as needed for spacing */
+    margin-left: 15px; /* Left margin for the logo */
+    margin-top: 10px;
+  }
+  
+  .navbar-typography {
+    width: 80px; /* Smaller size */
+    height: auto;
+  }
+  
+  /* Responsive adjustments for medium screens (between 768px and 992px) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .navbar.navbar-light {
+      height: var(--navbar-height-medium); /* Adjusted height for medium screens */
+    }
+  
+    .navbar-logo{
+        transform: scale(1.50); /* Slightly smaller */
+        margin-right: 25px;
+      }
+     .navbar-typography {
+      transform: scale(1.15); /* Slightly smaller */
+    }
+  
+    
+    .navbar.shrink .navbar-logo{
+        transform: scale(1.3); /* Even smaller when navbar shrinks */
+        
+      }
+
+    .navbar.shrink .navbar-typography {
+      transform: scale(1.1); /* Even smaller when navbar shrinks */
+      
+    }
+    
+  }
+  
+  /* Adjustments for larger screens (above 992px) */
+  @media (min-width: 992px) {
+    .navbar-logo {
+      width: 60px; /* Larger size for desktop */
+      margin-top: 10px; /* Adjust vertical alignment if needed */
+    }
+    
+    .navbar-typography {
+      width: 120px; /* Larger size for desktop */
+    }
+  
+    .navbar.shrink .navbar-logo,
+    .navbar.shrink .navbar-typography {
+      transform: scale(0.85); /* Scales down the logos */
+    }
+  }
+  
+  .navbar.shrink {
+    height: 70px; /* Reduced height */
+  }
+  
+  @media  (max-width: 768px){
+
+    .navbar.navbar-light {
+        height: var(--navbar-height-small); /* Adjusted height for medium screens */
+      }
+    
+      .navbar-logo{
+          transform: scale(1.30); /* Slightly smaller */
+          margin-right: 25px;
+          margin-top: 5px;
+        }
+       .navbar-typography {
+        transform: scale(1.10); /* Slightly smaller */
+        margin-top: -4px;
+      }
+    
+      
+      .navbar.shrink .navbar-logo{
+          transform: scale(1.30); /* Even smaller when navbar shrinks */
+          
+        }
+  
+      .navbar.shrink .navbar-typography {
+        transform: scale(1.1); /* Even smaller when navbar shrinks */
+        
+      }
+
+      
+  }
