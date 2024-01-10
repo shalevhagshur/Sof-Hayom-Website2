@@ -44,8 +44,9 @@ const NavBar = () => {
           <Nav className="ml-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            {/* Add other links as needed */}
+            <Nav.Link href="#Contact Us">Contact Us</Nav.Link>
+            <Nav.Link href="#The App">The App</Nav.Link>
+            <Nav.Link href="#Q&A">Q&A</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

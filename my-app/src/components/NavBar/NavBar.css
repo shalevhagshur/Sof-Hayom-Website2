@@ -2,9 +2,31 @@
 
 :root {
     --navbar-height-large: 85px; /* Height for large screens */
-    --navbar-height-medium: 85px; /* Height for medium screens */
+    --navbar-height-medium: 75px; /* Height for medium screens */
     --navbar-height-small: 68px; /* Height for small screens */
   }
+
+  
+  .navbar-nav {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the items horizontally */
+    width: 100%; /* Take full width to allow centering */
+    margin-right: 0; /* Adjust as needed */
+    margin-left: 0; /* Adjust as needed */
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color); /* Logo Orange */
+    background-color: black !important; /* Ensure background color is black */
+    width: 120px; /* 20% of the viewport width */
+    text-align: center; /* Center the text inside the link */
+    display: inline-block; /* Allows width specification */
+    padding: 10px; /* Optional: Adjust padding as needed */
+    margin: 0 auto; /* Center the link if the parent is wider */
+    height: auto;
+    border-radius: 20px; /* Optional: For rounded corners */
+    margin-top: 4px; 
+}
   
   .navbar.navbar-light {
     background-color: var(--secondary-color) !important; /* Dark Gray/Black */
@@ -14,12 +36,14 @@
     top: 0; /* Stick to the top */
     height: var(--navbar-height-large); /* Original larger height */
     transition: height 0.3s ease-in-out;
+    
+
   }
   
   .navbar-light .navbar-brand,
   .navbar-light .navbar-nav .nav-link {
     color: var(--primary-color); /* Logo Orange */
-    background-color: transparent !important;
+    background-color: transparent ;
     position: relative;
     overflow: hidden;
     transition: color 0.3s ease;
@@ -77,7 +101,10 @@
      .navbar-typography {
       transform: scale(1.15); /* Slightly smaller */
     }
-  
+    
+    .nav-link{
+        background-color: black;
+    }
     
     .navbar.shrink .navbar-logo{
         transform: scale(1.3); /* Even smaller when navbar shrinks */
@@ -88,6 +115,8 @@
       transform: scale(1.1); /* Even smaller when navbar shrinks */
       
     }
+
+    
     
   }
   
@@ -139,5 +168,7 @@
         
       }
 
-      
+
   }
+
+  
