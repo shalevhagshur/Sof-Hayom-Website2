@@ -50,15 +50,6 @@ const NavBar = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
-      {/* Long list of random content */}
-      <div className="content">
-        {Array.from({ length: 100 }).map((_, index) => (
-          <p key={index}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. {index}
-          </p>
-        ))}
-      </div>
     </>
   );
 };
