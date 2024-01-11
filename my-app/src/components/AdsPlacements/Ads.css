@@ -1,0 +1,71 @@
+/* CSS for Ads */
+
+@keyframes jump {
+    0%, 20%, 100% { transform: translateY(0); } /* Start, end, and during the pause */
+    10% { transform: translateY(-10px); } /* First jump */
+    30% { transform: translateY(-10px); } /* Second jump */
+    50% { transform: translateY(-10px); } /* Third jump */
+}
+
+.ads-container {
+    display: flex;
+    justify-content: space-between; /* Space ads evenly for larger screens */
+    margin: 20px;
+    flex-wrap: wrap; /* Allow ads to wrap on smaller screens */
+    z-index: 1;
+}
+
+.ad {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: transparent; /* Transparent background */
+    border: 1px solid transparent; /* Transparent border */
+    width: 160px; /* Default width */
+    height: 350px; /* Default height */
+    margin-bottom: 20px; /* Space between ads */
+    animation: jump 16.5s ease-in-out infinite; /* Animation with total duration */
+}
+
+.ad img {
+    max-width: 100%; /* Image will take up to 100% of the ad container */
+    max-height: 100%; /* Image height will not exceed the container */
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+/* Adjustments for small screens (phones) */
+@media (max-width: 699px) {
+    .ads-container {
+        flex-direction: column; /* Stack ads vertically on small screens */
+        align-items: center; /* Center ads */
+    }
+
+    .ad {
+        width: 100%; /* Full width for small screens */
+        height: 150px; /* Shorter height for horizontal ad */
+        margin: 10px 0; /* Margin top and bottom for spacing */
+    }
+}
+
+/* Adjustments for medium screens */
+@media (min-width: 700px) and (max-width: 767px) {
+    .ad {
+        width: 130px; /* Medium width */
+        height: 260px; /* Medium height */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ad {
+        width: 140px; /* Medium width */
+        height: 320px; /* Medium height */
+    }
+}
+
+/* Adjustments for larger screens (above 992px) */
+@media (min-width: 992px) {
+    .ad {
+        width: 160px; /* Larger width */
+        height: 350px; /* Larger height */
+    }
+}

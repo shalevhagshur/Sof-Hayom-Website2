@@ -1,0 +1,150 @@
+/* Global settings to ensure footer sticks to the bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    min-height: 0;
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--secondary-color); /* Dark Gray/Black */
+    color: var(--primary-color); /* Logo Orange */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    padding: 10px 20px; /* Adjusted padding */
+    height: auto; /* Height adjusts to content */
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/img/banner_transparent4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.footer-email, .footer-company-name {
+    flex-grow: 1;
+    text-align: center;
+    margin: 5px 0; /* Adjusted margin */
+}
+
+.footer-email a, .footer-company-name a {
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2;
+    align-items: center;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background-color: transparent;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-typography {
+    width: 100px; /* Adjusted size */
+    height: auto;
+    margin: 10px auto; /* Adjusted margin */
+}
+
+/* Icons */
+.icon1:before { content: '🌐'; }
+.icon2:before { content: '📞'; }
+.icon3:before { content: '✉️'; }
+.icon4:before { content: '🏠'; }
+
+/* Animations and adjustments for larger screens */
+@media (min-width: 992px) {
+    .footer {
+        height: 122px; /* Adjusted height for larger footer */
+        padding: 15px 20px; /* Adjusted padding */
+    }
+
+    .footer-content {
+        justify-content: space-evenly; /* Even spacing for larger screens */
+    }
+
+    .footer:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Medium screens adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer {
+        height: 115px;
+    }
+
+    .footer-nav, .footer-links {
+        flex-direction: row; /* Adjusted layout for medium screens */
+    }
+}
+
+/* Small screens / phones adjustments */
+@media (max-width: 767px) {
+    .footer {
+        height: auto; /* Adjusted height for smaller footer */
+        padding: 10px; /* Adjusted padding */
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-nav, .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}

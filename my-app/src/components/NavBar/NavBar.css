@@ -28,7 +28,7 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: -1; /* Keeps it behind the content */
-    width: 100vw;
+    width: 100%;
     
 
 }
@@ -39,6 +39,7 @@
     width: 100%; /* Take full width to allow centering */
     margin-right: 0; /* Adjust as needed */
     margin-left: 0; /* Adjust as needed */
+    
 }
 
 .navbar-nav .nav-link {
@@ -62,8 +63,7 @@
     top: 0; /* Stick to the top */
     height: var(--navbar-height-large); /* Original larger height */
     transition: height 0.3s ease-in-out;
-    
-
+    z-index: 1000;
   }
   
   .navbar-light .navbar-brand,

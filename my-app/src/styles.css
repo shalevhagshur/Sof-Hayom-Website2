@@ -10,6 +10,7 @@
   body {
     background-color: var(--background-color);
     color: var(--secondary-color);
+    
   }
   
   a, .cta-button {

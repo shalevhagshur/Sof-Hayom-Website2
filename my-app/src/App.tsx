@@ -1,12 +1,14 @@
 import React from 'react';
 import NavBar from './components/NavBar/NavBar';
-// Import other components as needed
+import Ads from './components/AdsPlacements/Ads';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <div>
       <NavBar />
-      {/* Other components will go here */}
+      <Ads/>
+      <Footer />
     </div>
   );
 }
