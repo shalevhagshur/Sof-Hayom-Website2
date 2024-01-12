@@ -1,0 +1,39 @@
+/* Home.css */
+
+/* General Styles for Home Component */
+.home-container {
+    /* Adjust padding or margins as needed */
+    padding: 20px;
+    margin: auto; /* Centers the content */
+    max-width: 800px; /* Adjust maximum width as needed */
+    min-height: 600px; /* Adjust minimum height as needed */
+}
+
+/* Adjustments for different screen sizes */
+@media (min-width: 992px) {
+    /* Larger screens (e.g., desktops) */
+    .home-container {
+        /* Adjust the width to fit between the ads */
+        max-width: 600px; /* Example width, adjust as needed */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Medium screens (e.g., tablets) */
+    .home-container {
+        /* Adjust the width to fit between the ads */
+        max-width: 500px; /* Example width, adjust as needed */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Smaller screens (e.g., mobile phones) */
+    .home-container {
+        /* Full width on smaller screens */
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Additional styles */
+/* Feel free to add more styling specific to the Home component here */

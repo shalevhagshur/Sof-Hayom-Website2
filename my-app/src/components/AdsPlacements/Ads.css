@@ -1,4 +1,4 @@
-/* CSS for Ads */
+    /* CSS for Ads */
 
 @keyframes jump {
     0%, 20%, 100% { transform: translateY(0); } /* Start, end, and during the pause */
