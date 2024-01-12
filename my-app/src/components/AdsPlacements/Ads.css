@@ -41,8 +41,21 @@
     }
 
     .ad {
-        width: 100%; /* Full width for small screens */
-        height: 150px; /* Shorter height for horizontal ad */
+        width: 290px; /* Full width for small screens */
+        height: 100px; /* Shorter height for horizontal ad */
+        margin: 10px 0; /* Margin top and bottom for spacing */
+    }
+}
+
+@media (max-width: 300px) {
+    .ads-container {
+        flex-direction: column; /* Stack ads vertically on small screens */
+        align-items: center; /* Center ads */
+    }
+
+    .ad {
+        width: 190px; /* Full width for small screens */
+        height: 100px; /* Shorter height for horizontal ad */
         margin: 10px 0; /* Margin top and bottom for spacing */
     }
 }
@@ -59,7 +72,9 @@
     .ad {
         width: 140px; /* Medium width */
         height: 320px; /* Medium height */
+        margin: 1px;
     }
+    
 }
 
 /* Adjustments for larger screens (above 992px) */
